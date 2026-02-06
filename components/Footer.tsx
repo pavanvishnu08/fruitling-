@@ -1,0 +1,93 @@
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import { Citrus, Instagram, Facebook, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="bg-gray-50 pt-16 pb-8 border-t border-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          
+          {/* Brand Column */}
+          <div className="space-y-6">
+            <div className="flex items-center space-x-2">
+              <Citrus className="text-fruitlinq-orange w-8 h-8" />
+              <span className="font-heading font-bold text-2xl text-fruitlinq-green">
+                Fruit<span className="text-fruitlinq-orange">linq</span>
+              </span>
+            </div>
+            <p className="text-gray-500 text-sm leading-relaxed">
+              India's first farm-controlled orange juice franchise. Bringing fresh, hygienic, and automated wellness to modern spaces.
+            </p>
+            <p className="text-xs text-gray-400">
+              A proud subsidiary of Hortgro Fresh Private Limited.
+            </p>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="font-heading font-semibold text-gray-900 mb-6">Quick Links</h3>
+            <ul className="space-y-4">
+              {['Home', 'About', 'Franchise', 'Contact'].map((item) => (
+                <li key={item}>
+                  <NavLink 
+                    to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                    className="text-gray-600 hover:text-fruitlinq-orange transition-colors text-sm"
+                  >
+                    {item}
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="font-heading font-semibold text-gray-900 mb-6">Contact Us</h3>
+            <ul className="space-y-4">
+              <li className="flex items-start space-x-3 text-sm text-gray-600">
+                <MapPin className="w-5 h-5 text-fruitlinq-green shrink-0" />
+                <span>Fruitlinq Agro Private Limited,<br/>Hyderabad, India.</span>
+              </li>
+              <li className="flex items-center space-x-3 text-sm text-gray-600">
+                <Phone className="w-5 h-5 text-fruitlinq-green shrink-0" />
+                <span>+91 93478 38756</span>
+              </li>
+              <li className="flex items-center space-x-3 text-sm text-gray-600">
+                <Mail className="w-5 h-5 text-fruitlinq-green shrink-0" />
+                <span>sales@fruitlinq.in</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Social / Newsletter */}
+          <div>
+            <h3 className="font-heading font-semibold text-gray-900 mb-6">Connect</h3>
+            <div className="flex space-x-4">
+              <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:text-fruitlinq-orange hover:shadow-md transition-all">
+                <Linkedin size={20} />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:text-fruitlinq-orange hover:shadow-md transition-all">
+                <Instagram size={20} />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:text-fruitlinq-orange hover:shadow-md transition-all">
+                <Facebook size={20} />
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="mt-16 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
+          <p>&copy; {new Date().getFullYear()} Fruitlinq Agro Private Limited. All rights reserved.</p>
+          <div className="flex space-x-6 mt-4 md:mt-0">
+            <a href="#" className="hover:text-gray-600">Privacy Policy</a>
+            <a href="#" className="hover:text-gray-600">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
