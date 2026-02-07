@@ -57,18 +57,6 @@ const Footer: React.FC = () => {
                 <Mail className="w-5 h-5 text-fruitlinq-green shrink-0" />
                 <span>sales@fruitlinq.in</span>
               </div>
-              <div className="mt-6">
-                <iframe
-                  src="https://maps.google.com/maps?q=GMK+Pheonix+Towers+Hyderabad&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                  width="100%"
-                  height="200"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="rounded-lg shadow-sm"
-                ></iframe>
-              </div>
             </div>
           </div>
 
@@ -88,6 +76,22 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
+        </div>
+
+        {/* Map Section */}
+        <div className="mt-12">
+          <div className="max-w-4xl mx-auto">
+            <iframe
+              src="https://maps.google.com/maps?output=embed&place_id=3iBpoG1i7fnbQzoJ8"
+              width="100%"
+              height="300"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-lg shadow-sm"
+            ></iframe>
+          </div>
         </div>
 
         <div className="mt-16 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
