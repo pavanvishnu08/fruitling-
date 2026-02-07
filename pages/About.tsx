@@ -1,13 +1,13 @@
 import React from 'react';
-import { Check, X } from 'lucide-react';
+import { Check, X, ShoppingCart, Coffee, Truck, Building } from 'lucide-react';
 
 const About: React.FC = () => {
   const supplyCountries = [
+    { name: 'India', code: 'in' },
     { name: 'South Africa', code: 'za' },
     { name: 'Egypt', code: 'eg' },
     { name: 'Tanzania', code: 'tz' },
     { name: 'Poland', code: 'pl' },
-    { name: 'India', code: 'in' },
     { name: 'USA', code: 'us' },
   ];
 
@@ -123,6 +123,94 @@ const About: React.FC = () => {
             <p className="mt-16 text-gray-500 max-w-2xl mx-auto leading-relaxed animate-fade-in delay-500">
                 Our farm-to-cup control spans 6 countries, ensuring that we control the quality, price, and availability of oranges year-round. No middlemen means higher margins for our partners.
             </p>
+        </div>
+      </section>
+
+      {/* Section Divider */}
+      <div className="py-16">
+        <div className="container mx-auto px-6">
+          <hr className="border-gray-200" />
+        </div>
+      </div>
+
+      {/* Additional Company Overview */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-heading text-3xl font-semibold text-gray-900 mb-12 text-center">Additional Company Overview</h2>
+
+            <div className="space-y-12">
+              {/* About Fruitlinq */}
+              <div>
+                <h3 className="font-heading text-2xl font-semibold text-gray-900 mb-4">About Fruitlinq</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Fruitlinq is a fresh grocery and food technology company specializing in fresh fruit sourcing, online fruit delivery, and freshly squeezed orange juice vending machines. Built on decades of experience in global fruit supply chains, we combine quality, technology, and convenience to deliver reliable fresh food experiences.
+                </p>
+                <p className="text-gray-600 leading-relaxed mt-4">
+                  Today, Fruitlinq operates two complementary businesses designed to make fresh food easily accessible.
+                </p>
+              </div>
+
+              {/* Our Businesses */}
+              <div>
+                <h3 className="font-heading text-2xl font-semibold text-gray-900 mb-6">Our Businesses</h3>
+
+                <div className="grid md:grid-cols-2 gap-8">
+                  {/* Fresh Fruits Through E-Commerce */}
+                  <div className="bg-gray-50 p-6 rounded-lg border border-gray-100">
+                    <div className="flex items-center mb-4">
+                      <ShoppingCart className="w-8 h-8 text-fruitlinq-orange mr-3" />
+                      <h4 className="font-semibold text-lg text-gray-900">Fresh Fruits Through E-Commerce</h4>
+                    </div>
+                    <p className="text-gray-600 leading-relaxed">
+                      Buy fresh, high-quality fruits online through the Fruitlinq app and website. We source fruits directly from trusted farmers and maintain freshness through strict quality checks, professional packaging, and efficient fulfillment.
+                    </p>
+                  </div>
+
+                  {/* Fresh Orange Juice Through Smart Vending */}
+                  <div className="bg-gray-50 p-6 rounded-lg border border-gray-100">
+                    <div className="flex items-center mb-4">
+                      <Coffee className="w-8 h-8 text-fruitlinq-orange mr-3" />
+                      <h4 className="font-semibold text-lg text-gray-900">Fresh Orange Juice Through Smart Vending</h4>
+                    </div>
+                    <p className="text-gray-600 leading-relaxed">
+                      Enjoy freshly squeezed orange juice on demand through our premium vending machines, strategically placed in high-footfall locations such as offices, commercial hubs, and public spaces. Each machine delivers hygienic, additive-free juice with consistent taste and freshness.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Why Fruitlinq */}
+              <div>
+                <h3 className="font-heading text-2xl font-semibold text-gray-900 mb-6">Why Fruitlinq</h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="flex items-start">
+                    <Truck className="w-6 h-6 text-fruitlinq-green mr-3 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="text-gray-600 leading-relaxed">25+ years of fresh produce and export expertise</p>
+                      <p className="text-gray-600 leading-relaxed">Direct farm sourcing with full traceability</p>
+                      <p className="text-gray-600 leading-relaxed">End-to-end supply chain control, from sourcing to packaging and exports</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <Building className="w-6 h-6 text-fruitlinq-green mr-3 mt-1 flex-shrink-0" />
+                    <div>
+                      <p className="text-gray-600 leading-relaxed">Reliable supply supported by forecasting and operational scale</p>
+                      <p className="text-gray-600 leading-relaxed">Digital platforms and franchise support for sustained growth</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Corporate Backing */}
+              <div>
+                <h3 className="font-heading text-2xl font-semibold text-gray-900 mb-4">Corporate Backing</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Fruitlinq operates as a wholly owned subsidiary of Hortgro Fresh Private Limited, a globally established fresh produce company with operations across multiple countries and a strong track record in international fruit exports.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
