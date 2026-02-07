@@ -10,12 +10,7 @@ const Footer: React.FC = () => {
           
           {/* Brand Column */}
           <div className="space-y-6">
-            <div className="flex items-center space-x-2">
-              <Citrus className="text-fruitlinq-orange w-8 h-8" />
-              <span className="font-heading font-bold text-2xl text-fruitlinq-green">
-                Fruit<span className="text-fruitlinq-orange">linq</span>
-              </span>
-            </div>
+            <img src="/logo.png" alt="Fruitlinq" className="h-12 w-auto" />
             <p className="text-gray-500 text-sm leading-relaxed">
               India's first farm-controlled orange juice franchise. Bringing fresh, hygienic, and automated wellness to modern spaces.
             </p>

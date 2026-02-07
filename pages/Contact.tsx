@@ -53,9 +53,14 @@ const Contact: React.FC = () => {
                <div className="bg-green-50 border border-green-100 p-8 rounded-2xl transition-transform hover:-translate-y-1 duration-300">
                   <h3 className="font-bold text-xl text-green-900 mb-2">Quick Chat?</h3>
                   <p className="text-green-800 mb-6">Connect with our franchise team directly on WhatsApp.</p>
-                  <Button variant="whatsapp" fullWidth className="flex items-center gap-2">
+                  <a
+                    href="https://wa.me/919347838756"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-full px-6 py-3 bg-[#25D366] text-white font-heading font-semibold rounded-full hover:bg-[#128C7E] hover:shadow-lg focus:ring-2 focus:ring-green-400 focus:ring-offset-2 transition-all duration-300 transform active:scale-95 gap-2"
+                  >
                     <MessageCircle size={20} /> Chat with Team
-                  </Button>
+                  </a>
                </div>
             </div>
 

@@ -86,7 +86,7 @@ const Home: React.FC = () => {
                 {/* Image Placeholder - simulating a high quality vending machine product shot */}
                 <div className="relative z-10 bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] flex items-center justify-center group">
                    <img 
-                     src="https://cdn.gamma.app/iy8eyofhaloe2da/b49ac99ce86947bebed7913ed677e4b1/original/WhatsApp-Image-2025-12-09-at-09.09.20.jpeg" 
+                     src="public\machine image.jpeg" 
                      alt="Fruitlinq Vending Machine" 
                      className="object-cover w-full h-full opacity-90 group-hover:scale-105 transition-transform duration-700"
                    />
@@ -320,9 +320,9 @@ const Home: React.FC = () => {
             {/* Tech Visual */}
             <div className="relative animate-slide-in-right lg:pl-10">
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-gray-800 group bg-gray-800 hover:shadow-fruitlinq-orange/20 transition-shadow duration-500">
-                 <img 
-                   src="https://cdn.gamma.app/iy8eyofhaloe2da/913673e8d4734bba80bc93d92be2368c/original/WhatsApp-Image-2025-12-09-at-09.09.07.jpeg" 
-                   alt="Fruitlinq Smart Vending Machine" 
+                 <img
+                   src="/machine image.jpeg"
+                   alt="Fruitlinq Smart Vending Machine"
                    className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
                  />
                  {/* Gradient Overlay */}
