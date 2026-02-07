@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { 
-  Zap, 
-  Leaf, 
-  Smartphone, 
-  Building2, 
-  ShoppingBag, 
-  Train, 
-  Stethoscope, 
-  GraduationCap, 
-  Briefcase
+import {
+  Zap,
+  Leaf,
+  Smartphone,
+  Building2,
+  ShoppingBag,
+  Train,
+  Stethoscope,
+  GraduationCap,
+  Briefcase,
+  Cpu,
+  BarChart,
+  Truck
 } from 'lucide-react';
 import Button from '../components/Button';
 
@@ -158,6 +161,56 @@ const Home: React.FC = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Performance. Technology. Supply. */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="font-heading text-3xl md:text-4xl font-semibold text-gray-900 mb-12 text-center">Performance. Technology. Supply.</h2>
+
+            <div className="space-y-16">
+              {/* Freshly Squeezed. Perfectly Automated. */}
+              <div className="text-center">
+                <h3 className="font-heading text-2xl font-semibold text-fruitlinq-orange mb-4">Freshly Squeezed. Perfectly Automated.</h3>
+                <div className="flex items-center justify-center mb-6">
+                  <Cpu className="w-8 h-8 text-fruitlinq-orange mr-3" />
+                  <h4 className="font-heading text-xl font-semibold text-gray-900">FRUITLINQ SMART JUICER</h4>
+                </div>
+                <p className="text-gray-600 leading-relaxed max-w-2xl mx-auto">
+                  Using cutting-edge robotics, machine vision, and AIoT, the Fruitlinq Smart Juicer makes real, freshly squeezed orange juice instantly available—safe, autonomous, and effortless.
+                </p>
+              </div>
+
+              {/* Performance You Can Measure. */}
+              <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+                <div className="text-center mb-8">
+                  <div className="flex items-center justify-center mb-4">
+                    <BarChart className="w-8 h-8 text-fruitlinq-green mr-3" />
+                    <h3 className="font-heading text-2xl font-semibold text-gray-900">Performance You Can Measure.</h3>
+                  </div>
+                  <p className="text-gray-600 leading-relaxed">
+                    Our end-to-end hardware and software solutions are field-tested and results-driven, engineered to maximize profitability while scaling efficiently across global markets.
+                  </p>
+                </div>
+              </div>
+
+              {/* FRUITLINQ SUPPLY */}
+              <div>
+                <div className="flex items-center justify-center mb-6">
+                  <Truck className="w-8 h-8 text-fruitlinq-orange mr-3" />
+                  <h3 className="font-heading text-2xl font-semibold text-gray-900">FRUITLINQ SUPPLY</h3>
+                </div>
+                <p className="text-gray-600 leading-relaxed text-center max-w-3xl mx-auto mb-6">
+                  Freshness you can rely on—globally. Fruitlinq manages the complete orange supply for every Fruitlinq Smart Juicer franchise, no matter where you operate. All oranges are freshly harvested from carefully selected farms in South Africa and Egypt, and handled through a strict cold-chain and quality-controlled logistics process.
+                </p>
+                <p className="text-gray-600 leading-relaxed text-center max-w-3xl mx-auto">
+                  From farm selection and quality checks to temperature-controlled transport and traceability, we ensure consistent taste, food safety, and uninterrupted supply across all markets.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
