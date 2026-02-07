@@ -85,9 +85,9 @@ const Home: React.FC = () => {
               <div className="w-full max-w-sm lg:max-w-md relative animate-float">
                 {/* Image Placeholder - simulating a high quality vending machine product shot */}
                 <div className="relative z-10 bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5] flex items-center justify-center group">
-                   <img 
-                     src="public\machine image.jpeg" 
-                     alt="Fruitlinq Vending Machine" 
+                   <img
+                     src="/machine image.jpeg"
+                     alt="Fruitlinq Vending Machine"
                      className="object-cover w-full h-full opacity-90 group-hover:scale-105 transition-transform duration-700"
                    />
                    <div className="absolute inset-0 bg-black/10 transition-opacity group-hover:opacity-0"></div>

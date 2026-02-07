@@ -1,8 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 import Button from '../components/Button';
 
 const Contact: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    email: '',
+    city: '',
+    locationType: 'Mall',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const whatsappMessage = `*New Franchise Inquiry*%0A%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Email:* ${formData.email}%0A*City:* ${formData.city}%0A*Location Type:* ${formData.locationType}%0A*Message:* ${formData.message}`;
+
+    const whatsappUrl = `https://wa.me/919347838756?text=${whatsappMessage}`;
+
+    window.open(whatsappUrl, '_blank');
+
+    // Reset form
+    setFormData({
+      name: '',
+      phone: '',
+      email: '',
+      city: '',
+      locationType: 'Mall',
+      message: ''
+    });
+  };
+
   return (
     <div className="pt-20 bg-gray-50 min-h-screen">
       <section className="py-20">
@@ -67,31 +104,68 @@ const Contact: React.FC = () => {
             {/* Form */}
             <div className="bg-white p-8 md:p-10 rounded-2xl shadow-lg animate-slide-in-right">
                 <h3 className="font-bold text-2xl mb-6">Request a Callback</h3>
-                <form className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="grid md:grid-cols-2 gap-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                            <input type="text" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-fruitlinq-orange focus:ring-1 focus:ring-fruitlinq-orange outline-none transition-colors" placeholder="John Doe" />
+                            <input
+                              type="text"
+                              name="name"
+                              value={formData.name}
+                              onChange={handleInputChange}
+                              required
+                              className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-fruitlinq-orange focus:ring-1 focus:ring-fruitlinq-orange outline-none transition-colors"
+                              placeholder="John Doe"
+                            />
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1">Phone</label>
-                            <input type="tel" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-fruitlinq-orange focus:ring-1 focus:ring-fruitlinq-orange outline-none transition-colors" placeholder="+91 98765 43210" />
+                            <input
+                              type="tel"
+                              name="phone"
+                              value={formData.phone}
+                              onChange={handleInputChange}
+                              required
+                              className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-fruitlinq-orange focus:ring-1 focus:ring-fruitlinq-orange outline-none transition-colors"
+                              placeholder="+91 98765 43210"
+                            />
                         </div>
                     </div>
-                    
+
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                        <input type="email" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-fruitlinq-orange focus:ring-1 focus:ring-fruitlinq-orange outline-none transition-colors" placeholder="john@example.com" />
+                        <input
+                          type="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleInputChange}
+                          required
+                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-fruitlinq-orange focus:ring-1 focus:ring-fruitlinq-orange outline-none transition-colors"
+                          placeholder="john@example.com"
+                        />
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-4">
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1">City</label>
-                            <input type="text" className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-fruitlinq-orange focus:ring-1 focus:ring-fruitlinq-orange outline-none transition-colors" placeholder="Hyderabad" />
+                            <input
+                              type="text"
+                              name="city"
+                              value={formData.city}
+                              onChange={handleInputChange}
+                              required
+                              className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-fruitlinq-orange focus:ring-1 focus:ring-fruitlinq-orange outline-none transition-colors"
+                              placeholder="Hyderabad"
+                            />
                         </div>
                         <div>
                             <label className="block text-sm font-medium text-gray-700 mb-1">Interested Location Type</label>
-                            <select className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-fruitlinq-orange focus:ring-1 focus:ring-fruitlinq-orange outline-none transition-colors bg-white">
+                            <select
+                              name="locationType"
+                              value={formData.locationType}
+                              onChange={handleInputChange}
+                              className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-fruitlinq-orange focus:ring-1 focus:ring-fruitlinq-orange outline-none transition-colors bg-white"
+                            >
                                 <option>Mall</option>
                                 <option>IT Park</option>
                                 <option>University</option>
@@ -104,7 +178,14 @@ const Contact: React.FC = () => {
 
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                        <textarea rows={4} className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-fruitlinq-orange focus:ring-1 focus:ring-fruitlinq-orange outline-none transition-colors" placeholder="Tell us about your investment plans..."></textarea>
+                        <textarea
+                          rows={4}
+                          name="message"
+                          value={formData.message}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-fruitlinq-orange focus:ring-1 focus:ring-fruitlinq-orange outline-none transition-colors"
+                          placeholder="Tell us about your investment plans..."
+                        ></textarea>
                     </div>
 
                     <Button type="submit" fullWidth size="lg" className="hover:scale-[1.02]">Submit Request</Button>
