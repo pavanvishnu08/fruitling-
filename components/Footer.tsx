@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
         <div className="mt-12">
           <div className="max-w-4xl mx-auto">
             <iframe
-              src="https://maps.google.com/maps?output=embed&place_id=3iBpoG1i7fnbQzoJ8"
+              src="https://maps.google.com/maps?q=place_id:0x3bcb912e9d540735:0x3b69d3389e3956d0&output=embed"
               width="100%"
               height="300"
               style={{ border: 0 }}
