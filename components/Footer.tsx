@@ -43,9 +43,8 @@ const Footer: React.FC = () => {
               <div className="flex items-start space-x-3 text-sm text-gray-600">
                 <MapPin className="w-5 h-5 text-fruitlinq-green shrink-0 mt-1" />
                 <div>
-                  <p className="font-medium">FRUITLINQ AGRO PRIVATE LIMITED</p>
-                  <p>GMK Pheonix Towers H.No - 7-1-621/305/270.3RT,</p>
-                  <p>Road No.2, S R Nagar, Ameerpet,</p>
+                  <p className="font-medium">FRUITLINQ AGRO Pvt. Ltd.</p>
+                  <p>GMK Pheonix Towers, S R Nagar,</p>
                   <p>Hyderabad 500038, Telangana. INDIA.</p>
                 </div>
               </div>
@@ -67,7 +66,7 @@ const Footer: React.FC = () => {
               <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:text-fruitlinq-orange hover:shadow-md transition-all">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:text-fruitlinq-orange hover:shadow-md transition-all">
+              <a href="https://www.instagram.com/fruitlinq/" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:text-fruitlinq-orange hover:shadow-md transition-all">
                 <Instagram size={20} />
               </a>
               <a href="#" className="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:text-fruitlinq-orange hover:shadow-md transition-all">
@@ -82,7 +81,7 @@ const Footer: React.FC = () => {
         <div className="mt-12">
           <div className="max-w-4xl mx-auto">
             <iframe
-              src="https://maps.google.com/maps?q=place_id:0x3bcb912e9d540735:0x3b69d3389e3956d0&output=embed"
+              src="https://maps.google.com/maps?q=17.4428097,78.4444698&output=embed"
               width="100%"
               height="300"
               style={{ border: 0 }}
@@ -95,7 +94,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="mt-16 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Fruitlinq Agro Private Limited. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Fruitlinq Agro Private Limited. All rights reserved. Developed by Exelus Info.tech. </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-gray-600">Privacy Policy</a>
             <a href="#" className="hover:text-gray-600">Terms of Service</a>

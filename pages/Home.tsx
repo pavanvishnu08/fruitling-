@@ -12,7 +12,8 @@ import {
   Briefcase,
   Cpu,
   BarChart,
-  Truck
+  Truck,
+  Citrus
 } from 'lucide-react';
 import Button from '../components/Button';
 
@@ -50,7 +51,7 @@ const Home: React.FC = () => {
               </h1>
               <p className="text-xl text-gray-600 leading-relaxed max-w-lg animate-fade-in-up delay-300">
                 Imported, premium oranges from South Africa & Egypt. Freshly squeezed in front of you. 
-                <span className="font-semibold text-gray-800 block mt-2">No water. No sugar. No ice.</span>
+                <span className="font-bold text-green-600 block mt-2">No water. No sugar. No ice.</span>
               </p>
               
               <div className="flex flex-wrap gap-4 animate-fade-in-up delay-400">
@@ -61,22 +62,22 @@ const Home: React.FC = () => {
               {/* Trust Badges */}
               <div className="pt-8 flex flex-wrap gap-6 text-sm font-medium text-gray-500 border-t border-gray-100 animate-fade-in delay-500">
                 <div className="flex items-center space-x-2 hover:text-fruitlinq-green transition-colors group cursor-default">
-                  <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-fruitlinq-green group-hover:rotate-12 transition-transform">
-                    <Leaf size={16} />
+                  <div className="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-fruitlinq-green group-hover:rotate-12 transition-transform">
+                    <Leaf size={24} />
                   </div>
-                  <span>100% Fresh Juice</span>
+                  <span className="text-lg">100% Fresh Juice</span>
                 </div>
                 <div className="flex items-center space-x-2 hover:text-fruitlinq-orange transition-colors group cursor-default">
-                  <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-fruitlinq-orange group-hover:rotate-12 transition-transform">
-                    <Zap size={16} />
+                  <div className="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-fruitlinq-orange group-hover:rotate-12 transition-transform">
+                    <Zap size={24} />
                   </div>
-                  <span>Fully Automatic</span>
+                  <span className="text-lg">Fully Automatic</span>
                 </div>
                 <div className="flex items-center space-x-2 hover:text-blue-600 transition-colors group cursor-default">
-                  <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 group-hover:rotate-12 transition-transform">
-                    <Smartphone size={16} />
+                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 group-hover:rotate-12 transition-transform">
+                    <Smartphone size={24} />
                   </div>
-                  <span>UPI Enabled</span>
+                  <span className="text-lg">UPI Enabled</span>
                 </div>
               </div>
             </div>
@@ -166,15 +167,23 @@ const Home: React.FC = () => {
       </section>
 
       {/* Performance. Technology. Supply. */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-6">
+      <section className="py-24 bg-orange-100 relative overflow-hidden">
+        <div className="absolute top-0 right-0 p-20 opacity-10">
+            <Citrus size={300} className="text-orange-600 animate-spin-slow" />
+        </div>
+        <div className="absolute bottom-0 left-0 p-20 opacity-10">
+            <Citrus size={250} className="text-orange-500 animate-bounce" />
+        </div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5">
+            <Citrus size={400} className="text-orange-300 animate-pulse" />
+        </div>
+        <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="font-heading text-3xl md:text-4xl font-semibold text-gray-900 mb-12 text-center">Performance. Technology. Supply.</h2>
 
             <div className="space-y-16">
               {/* Freshly Squeezed. Perfectly Automated. */}
               <div className="text-center">
-                <h3 className="font-heading text-2xl font-semibold text-fruitlinq-orange mb-4">Freshly Squeezed. Perfectly Automated.</h3>
+                <h3 className="font-heading text-2xl font-semibold text-fruitlinq-black mb-4">Freshly Squeezed. Perfectly Automated.</h3>
                 <div className="flex items-center justify-center mb-6">
                   <Cpu className="w-8 h-8 text-fruitlinq-orange mr-3" />
                   <h4 className="font-heading text-xl font-semibold text-gray-900">FRUITLINQ SMART JUICER</h4>
@@ -291,7 +300,6 @@ const Home: React.FC = () => {
                 {[
                   "55-second service time",
                   "Fully contactless operation",
-                  "200–300 cups/day capacity",
                   "Digital payments (UPI, QR, Cards)",
                   "Globally proven engineering"
                 ].map((feat, i) => (

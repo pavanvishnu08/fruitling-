@@ -19,6 +19,7 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
+    { name: 'Smart Juicer', path: '/smart-juicer' },
     { name: 'Franchise', path: '/franchise' },
     { name: 'Contact', path: '/contact' },
   ];
@@ -34,7 +35,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <NavLink to="/" className="flex items-center group">
-            <img src="/logo.png" alt="Fruitlinq Logo" className="h-12 w-auto object-contain group-hover:scale-105 transition-transform" />
+            <img src="/logo.png" alt="Fruitlinq Logo" className="h-16 w-auto object-contain group-hover:scale-105 transition-transform" />
           </NavLink>
 
           {/* Desktop Nav */}
